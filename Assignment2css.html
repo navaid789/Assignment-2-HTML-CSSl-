@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Details Form</title>
+  <style>
+   body {
+      background-color: #09003f; /* Dark blue background color */
+      color: #fff; /* White text color */
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 135vh;
+    }
+
+    form {
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: left;
+      width: 80%; /* Adjust the width as needed */
+      margin: auto; /* Center the form */
+    }
+  </style>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <P>Please fill out form with the required information</P><br><br>
+
+  <form action="/submit" method="post">
+    <label for="firstName">Enter your First Name:</label><br>
+    <input type="text" id="firstName" name="firstName" required style=" background-color: black;color: white;"><br><br>
+
+    <label for="lastName">Enter Your Last Name:</label><br>
+    <input type="text" id="lastName" name="lastName" required style=" background-color: black;color: white;"><br><br>
+
+    <label for="email">Enter Your Email:</label><br>
+    <input type="email" id="email" name="email" required style=" background-color: black;color: white;"><br><br>
+
+    <label for="newpassword">Create a New Password:</label><br>
+    <input type="newpassword" id="newpassword" name="newpassword" required style=" background-color: black;color: white;"><br><br>
+    <hr>
+      <label>
+        <input type="radio" name="radioGroup" value="option1">
+        Personal Account
+      </label><br>
+      <label>
+        <input type="radio" name="radioGroup" value="option1">
+        Business Account
+      </label><br>
+      <label>
+        <input type="checkbox" name="radioGroup" value="option1">
+        I accept the <u>terms and condition</u>
+      </label><br>
+  <hr>
+
+  <label for="imageUpload">Upload a Profile picture:</label><br>
+
+  <input type="file" id="imageUpload" name="image" accept="image/*" capture="environment"><br><br>
+
+  <label for="numericField">Input your age (years):</label><br>
+  <input type="text" id="numericField" name="numericField" pattern="[0-9]*" inputmode="numeric" style=" background-color: black;color: white;"><br><br>
+
+  <label for="dropdown">How did you hear about us?</label><br>
+  <select id="dropdown" name="fruit">
+      <option value="apple">Facebook</option>
+      <option value="orange">Youtube</option>
+      <option value="banana">newspaper</option>
+  </select><br><br>
+
+  <label for="multiWordInput">Provide a bio:</label><br>
+
+  <textarea id="multiWordInput" name="multiWordInput" rows="4" cols="50" placeholder="I like coding on the beach..."></textarea><br><br>
+
+  <button type="submit">Submit</button>
+  </form>
+
+</body>
+</html>
